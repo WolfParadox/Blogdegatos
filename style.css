@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-smoothing: graysacle;
+
+}
+
+:root{
+    font-size: 62.5%;
+
+    --color-base-blue: #065E7C;
+    
+    --color-base-blue-100 :#387E96;
+
+    --color-base-white: #ffffff;
+
+    --color-base-black: #121214;
+}
+
+html,body,input{
+
+    font-family: 'Mulish', sans-serif;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+
+
+#blog{
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+}
+
+.container{
+    width: 43.0rem;
+    margin: 0 auto;
+
+}
+
+header{
+    background-color: var(--color-base-blue);
+
+    display: flex;
+    padding: 1.2rem 2.8rem;
+    width: 100%;
+    
+    justify-content: center;
+    gap: 1.2rem;
+
+
+}
+
+
+.input-wrapper label{
+    width: .1rem;
+    height: .1rem;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input{
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+
+    border: 0;
+    border-radius: 4px;
+    
+    background-color: var(--color-base-blue-100);
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+}
+
+.input-wrapper input::placeholder{
+    color: var(--color-base-white);
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+  
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .first{
+    padding: 3.1rem 2.2rem 3.4rem 2.2rem;
+    margin: 0 auto;
+  }
+
+  main h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+  }
+
+  #like{
+    margin-bottom: 3.1rem;
+  }
+
+  .first p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+  }
+
+  .secundary{
+    padding: 0 2.2rem 3.9rem ;
+  }
+  
+  .secundary h1{
+    margin-bottom: 3.2rem;
+  }
+ 
+  main h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+  }
+
+
+  .item{
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+    aspect-ratio: 16/4.1;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  #like img:hover{
+   
+    opacity: 0.8;
+}
+
+
+footer{
+    background-color: var(--color-base-blue-100);
+    padding: 1.6rem;
+    width: 100%;
+    text-align: center;
+    color: var(--color-base-white);
+
+}
+
+@media(min-width: 700px){
+    
+
+  #blog{
+    display: grid;
+    grid-template-areas: "header header header" 
+                          "first first secundary"
+                          "footer footer footer" ;   
+  }
+
+  
+  
+  .container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+header{
+  padding: 1.2rem 11.2rem;
+  display: flex;
+  align-items: center;
+  gap: 7.2rem;
+  grid-area: header;
+}
+
+header form{
+  flex: 1;
+}
+
+.input-wrapper input{
+  padding: 1.2rem 1.6rem;
+  
+}
+
+
+#cat{
+width: 100%;
+  margin-bottom: 3.1rem;
+  border-radius: 5px;
+}
+
+main{
+
+  padding: 4.4rem 11.0rem ;
+  gap: 3.4rem;
+  
+}
+
+.test{
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 3.1rem;
+}
+
+#like{
+  gap: 1.2rem;
+}
+
+#blog main{
+  grid-area: first;
+}
+main h1{
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.8rem;
+}
+
+
+main p{
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-bottom: 3.9rem;
+}
+
+.item{
+  display: flex;
+  gap:1.6rem;
+  margin-bottom: 3.2rem;
+
+  aspect-ratio:  30/03;
+  object-fit: contain;
+  
+  border-radius: 5px;
+}
+
+
+
+#blog aside{
+  grid-area: secundary;
+}
+
+.secundary{
+  margin-top: 4.4rem;
+}
+
+.secundary h1{
+  margin-bottom: 3.2rem;
+}
+
+.secundary h2{
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  }
+
+  .secundary p{
+    font-size: 1.4rem;
+    
+}
+
+#blog footer{
+  grid-area: footer;
+}
+
+}
+
